@@ -19,8 +19,8 @@ app.use(bodyParser.json())
 app.use(cors())
 
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000")
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server is running on port ${process.env.PORT}`)
 })
 
 app.post("/signin", (req,res) => {
