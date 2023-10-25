@@ -3,11 +3,8 @@ const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt-nodejs')
 const cors = require('cors')
 const db = require('knex')({
-    client: 'pg',
-    connection: {
-      host : 'postgres://root:GPtUO4bWCx5K0aQHNTba8cUptZrT0Nfe@dpg-ckscnbfd47qs73co3ofg-a.oregon-postgres.render.com/facedetection_bxd9',
-      ssl: true,
-    }
+      client: 'pg',
+      connection: "postgres://root:GPtUO4bWCx5K0aQHNTba8cUptZrT0Nfe@dpg-ckscnbfd47qs73co3ofg-a.oregon-postgres.render.com/facedetection_bxd9",
   });
 
 
