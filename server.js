@@ -5,7 +5,7 @@ const cors = require('cors')
 const db = require('knex')({
     client: 'pg',
     connection: {
-      host : 'dpg-ckscnbfd47qs73co3ofg-a.oregon-postgres.render.com',
+      host : 'postgres://root:GPtUO4bWCx5K0aQHNTba8cUptZrT0Nfe@dpg-ckscnbfd47qs73co3ofg-a.oregon-postgres.render.com/facedetection_bxd9',
       ssl: true,
     }
   });
