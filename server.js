@@ -6,10 +6,7 @@ const db = require('knex')({
     client: 'pg',
     connection: {
       host : 'dpg-ckscnbfd47qs73co3ofg-a.oregon-postgres.render.com',
-      port : 5432,
-      user : 'root',
-      password : 'GPtUO4bWCx5K0aQHNTba8cUptZrT0Nfe',
-      database : 'facedetection_bxd9'
+      ssl: true,
     }
   });
 
