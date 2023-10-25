@@ -3,15 +3,24 @@ const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt-nodejs')
 const cors = require('cors')
 
-try {
-    const db = require('knex')({
-        client: 'pg',
-        connection: "postgres://root:GPtUO4bWCx5K0aQHNTba8cUptZrT0Nfe@dpg-ckscnbfd47qs73co3ofg-a.oregon-postgres.render.com/facedetection_bxd9",
+const db = knex({
+    client: 'pg',
+    connection: {
+      connectionString: "postgres://root:GPtUO4bWCx5K0aQHNTba8cUptZrT0Nfe@dpg-ckscnbfd47qs73co3ofg-a.oregon-postgres.render.com/facedetection_bxd9",
+      ssl: {
+        rejectUnauthorized: false,
+      },
+    },
+  });
+  
+  // Check if the database is connected
+  db.raw('SELECT 1')
+    .then(() => {
+      console.log('Database connection established.');
+    })
+    .catch(error => {
+      console.error('Database connection error:', error);
     });
-    console.log('Database connection established.');
-} catch (error) {
-    console.error('Database connection error:', error);
-}
 
 
 
