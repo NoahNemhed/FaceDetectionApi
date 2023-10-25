@@ -5,11 +5,11 @@ const cors = require('cors')
 const db = require('knex')({
     client: 'pg',
     connection: {
-      host : 'localhost',
+      host : 'dpg-ckscnbfd47qs73co3ofg-a',
       port : 5432,
-      user : 'postgres',
-      password : 'test',
-      database : 'face-detection'
+      user : 'root',
+      password : 'GPtUO4bWCx5K0aQHNTba8cUptZrT0Nfe',
+      database : 'facedetection_bxd9'
     }
   });
 
